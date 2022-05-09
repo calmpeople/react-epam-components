@@ -1,0 +1,30 @@
+.movie-item {
+    width: calc((100% - 120px) / 3);
+    margin: 0 0 50px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgba(255, 255, 255, .7);
+}
+.movie-item .item-info {
+    margin: 0 20px 0 0;
+}
+.movie-item .item-year {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+.movie-item .item-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 22px;
+}
+.movie-item .item-description {
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, .5);
+}
