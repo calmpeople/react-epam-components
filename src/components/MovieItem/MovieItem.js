@@ -1,5 +1,5 @@
 import React from "react";
-import './styles.css';
+import './styles.scss';
 import PropTypes from 'prop-types';
 import imageMovie from './image-1.jpg';
 

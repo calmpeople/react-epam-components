@@ -4,7 +4,7 @@ import Footer from './Footer/Footer';
 import MainContent from "./MainContent/MainContent";
 import MovieList from "./MovieList/MovieList";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
-import './common-styles.css';
+import './common-styles.scss';
 
 class App extends Component {
     render() {
