@@ -1,7 +1,6 @@
 import React from "react";
 import MovieItem from "../MovieItem/MovieItem";
 import './styles.css';
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 
 function MovieList() {
     const movieArray = [
@@ -43,7 +42,14 @@ function MovieList() {
         }
     ];
     const movieArrayComponents = movieArray.map(item => {
-        return <MovieItem key={item.id} title={item.title} description={item.description} year={item.year}></MovieItem>
+        return <MovieItem
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            year={item.year}
+            img={item.img}
+            src={item.src}
+        />
     });
     return (
         <div className='movie-list'>

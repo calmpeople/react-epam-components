@@ -36,6 +36,16 @@ module.exports = {
                     'css-loader'
                 ],
             },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: { name: 'img/[name].[ext]' }
+                    },
+                    'image-webpack-loader'
+                ],
+            }
         ]
     },
     plugins: [
