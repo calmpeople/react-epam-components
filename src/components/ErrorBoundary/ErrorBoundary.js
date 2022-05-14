@@ -1,17 +1,22 @@
 import React from "react";
 
-function ErrorBoundary(props) {
-    const ErrorText = () => (
-        <h2>
-            Something wrong...
-        </h2>
-    )
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
 
-    let isEverythingOK = true;
+    componentDidCatch(error, errorInfo) {
+        this.setState({ hasError: true })
+    }
 
-    return (
-        <>{isEverythingOK ? props.children : <ErrorText />}</>
-    )
+    render() {
+        if (this.state.hasError) {
+            return <h2>Something wrong...</h2>;
+        }
+
+        return this.props.children;
+    }
 }
 
 export default ErrorBoundary;
